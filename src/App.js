@@ -37,8 +37,8 @@ function App() {
   ];
 
   let words = ["camello"];
-  let wordSplitted = words.split("");
-  console.log(wordSplitted);
+  /*let wordSplitted = words.split("");
+  console.log(wordSplitted);*/
 
   let [textMessage, setTextMessage] = useState("Push a letter!");
 
