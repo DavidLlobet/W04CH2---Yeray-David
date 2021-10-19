@@ -3,9 +3,7 @@ import { useState } from "react";
 import "./Letter.css";
 
 const Letter = ({ text, actionOnClick }) => {
-  let [disabled, setDisabled] = useState(false);
-
-  const a = 1;
+  const [disabled, setDisabled] = useState(false);
 
   Letter.propTypes = {
     text: PropTypes.string.isRequired,

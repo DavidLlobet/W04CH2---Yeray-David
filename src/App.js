@@ -1,9 +1,8 @@
-import { useState } from "react";
 import "./App.css";
+import Box from "./Components/Box/Box";
 import Hangman from "./Components/Hangman/Hangman";
 import Letter from "./Components/Letter/Letter";
 import Message from "./Components/Message/Message";
-import Cell from "./Components/Cell/Cell";
 
 function App() {
   let abecedary = [
@@ -36,11 +35,10 @@ function App() {
     "z",
   ];
 
-  let words = ["camello"];
-  let wordSplitted = words.split("");
-  console.log(wordSplitted);
+  let words = ["pocahontas"];
+  let wordSplitted = words[0].split("");
 
-  let [textMessage, setTextMessage] = useState("Push a letter!");
+  const textMessage = "Push a letter!";
 
   return (
     <>
@@ -57,16 +55,20 @@ function App() {
               </section>
             </div>
             <div className="abecedary">
-              {abecedary.map((letter) => (
+              {abecedary.map((letter, i) => (
                 <Letter
+                  key={i}
                   className="abecedary__letter"
-                  key={letter}
                   text={letter.toUpperCase()}
                 />
               ))}
             </div>
           </div>
-          <ul className="game__word"></ul>
+          <ul className="game__word">
+            {wordSplitted.map((char, i) => (
+              <Box key={i} letter={char} />
+            ))}
+          </ul>
         </main>
         <footer></footer>
       </div>
