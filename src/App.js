@@ -1,19 +1,51 @@
-import { useEffect } from "react";
 import "./App.css";
+import Letter from "./Components/Letter/Letter";
 
 function App() {
+  let abecedary = [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g",
+    "h",
+    "i",
+    "j",
+    "k",
+    "l",
+    "m",
+    "n",
+    "ñ",
+    "o",
+    "p",
+    "q",
+    "r",
+    "s",
+    "t",
+    "u",
+    "v",
+    "w",
+    "x",
+    "y",
+    "z",
+  ];
+
   return (
     <>
-      <div class="container">
+      <div className="container">
         <header className="header">
           <h1 className="main-title">THE HANGMAN</h1>
         </header>
         <main className="game">
           <div className="gameboard">
             <section className="hangman"></section>
-            <ul className="abecedary">
-              <li className="abecedaryletter"></li>
-            </ul>
+            <div className="abecedary">
+              {abecedary.map((letter) => (
+                <Letter key={letter} text={letter.toUpperCase()} />
+              ))}
+            </div>
           </div>
           <ul className="game__word"></ul>
         </main>
