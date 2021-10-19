@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./App.css";
 import Cell from "./Components/Cell/Cell";
 import Hangman from "./Components/Hangman/Hangman";
@@ -39,7 +38,7 @@ function App() {
   let words = ["pocahontas"];
   let wordSplitted = words[0].split("");
 
-  const [textMessage, setTextMessage] = useState("Push a letter!");
+  const textMessage = "Push a letter!";
 
   return (
     <>
@@ -56,18 +55,18 @@ function App() {
               </section>
             </div>
             <div className="abecedary">
-              {abecedary.map((letter) => (
+              {abecedary.map((letter, i) => (
                 <Letter
+                  key={i}
                   className="abecedary__letter"
-                  key={letter}
                   text={letter.toUpperCase()}
                 />
               ))}
             </div>
           </div>
           <ul className="game__word">
-            {wordSplitted.map((char) => (
-              <Cell letter={char} />
+            {wordSplitted.map((char, i) => (
+              <Cell key={i} letter={char} />
             ))}
           </ul>
         </main>

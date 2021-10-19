@@ -5,8 +5,6 @@ import "./Letter.css";
 const Letter = ({ text, actionOnClick }) => {
   const [disabled, setDisabled] = useState(false);
 
-  const a = 1;
-
   Letter.propTypes = {
     text: PropTypes.string.isRequired,
     actionOnClick: PropTypes.func.isRequired,
