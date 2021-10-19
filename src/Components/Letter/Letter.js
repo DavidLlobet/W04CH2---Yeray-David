@@ -3,7 +3,7 @@ import { useState } from "react";
 import "./Letter.css";
 
 const Letter = ({ text, actionOnClick }) => {
-  let [disabled, setDisabled] = useState(false);
+  const [disabled, setDisabled] = useState(false);
 
   const a = 1;
 

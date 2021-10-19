@@ -36,12 +36,9 @@ function App() {
   ];
 
   let words = ["pocahontas"];
-  let wordSplitted = 
+  let wordSplitted = words[0].split("");
 
-  
-
-
-  let [textMessage, setTextMessage] = useState("Push a letter!");
+  const [textMessage, setTextMessage] = useState("Push a letter!");
 
   return (
     <>
