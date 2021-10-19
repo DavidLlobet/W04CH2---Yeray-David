@@ -34,7 +34,7 @@ function App() {
 
   return (
     <>
-      <div class="container">
+      <div className="container">
         <header className="header">
           <h1 className="main-title">THE HANGMAN</h1>
         </header>
@@ -43,7 +43,7 @@ function App() {
             <section className="hangman"></section>
             <div className="abecedary">
               {abecedary.map((letter) => (
-                <Letter text={letter.toUpperCase()} />
+                <Letter key={letter} text={letter.toUpperCase()} />
               ))}
             </div>
           </div>
