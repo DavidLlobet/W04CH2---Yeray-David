@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
+import "./Letter.css";
 
 const Letter = ({ text, actionOnClick }) => {
   let [disabled, setDisabled] = useState(false);
