@@ -3,7 +3,6 @@ import "./App.css";
 import Hangman from "./Components/Hangman/Hangman";
 import Letter from "./Components/Letter/Letter";
 import Message from "./Components/Message/Message";
-import Cell from "./Components/Cell/Cell";
 
 function App() {
   let abecedary = [
