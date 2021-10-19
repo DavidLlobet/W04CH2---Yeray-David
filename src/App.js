@@ -1,5 +1,5 @@
 import "./App.css";
-import Cell from "./Components/Cell/Cell";
+import Box from "./Components/Box/Box";
 import Hangman from "./Components/Hangman/Hangman";
 import Letter from "./Components/Letter/Letter";
 import Message from "./Components/Message/Message";
@@ -66,7 +66,7 @@ function App() {
           </div>
           <ul className="game__word">
             {wordSplitted.map((char, i) => (
-              <Cell key={i} letter={char} />
+              <Box key={i} letter={char} />
             ))}
           </ul>
         </main>
