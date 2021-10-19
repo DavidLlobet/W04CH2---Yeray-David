@@ -1,5 +1,9 @@
+import { useState } from "react";
 import "./App.css";
+import Hangman from "./Components/Hangman/Hangman";
 import Letter from "./Components/Letter/Letter";
+import Message from "./Components/Message/Message";
+import Cell from "./Components/Cell/Cell";
 
 function App() {
   let abecedary = [
@@ -32,18 +36,33 @@ function App() {
     "z",
   ];
 
+  let words = ["camello"];
+  let wordSplitted = words.split("");
+  console.log(wordSplitted);
+
+  let [textMessage, setTextMessage] = useState("Push a letter!");
+
   return (
     <>
-      <div className="container">
-        <header className="header">
+      <div className="main-container">
+        <header className="main-header">
           <h1 className="main-title">THE HANGMAN</h1>
         </header>
         <main className="game">
-          <div className="gameboard">
-            <section className="hangman"></section>
+          <div className="game__board">
+            <div>
+              <Message text={textMessage} />
+              <section className="game__hangman">
+                <Hangman />
+              </section>
+            </div>
             <div className="abecedary">
               {abecedary.map((letter) => (
-                <Letter key={letter} text={letter.toUpperCase()} />
+                <Letter
+                  className="abecedary__letter"
+                  key={letter}
+                  text={letter.toUpperCase()}
+                />
               ))}
             </div>
           </div>

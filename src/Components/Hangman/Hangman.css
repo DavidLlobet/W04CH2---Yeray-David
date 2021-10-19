@@ -1,0 +1,11 @@
+svg.hangman {
+  width: 500px;
+  height: 500px;
+}
+svg > * {
+  stroke: #6599aa;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+  transition: 0.25s;
+}

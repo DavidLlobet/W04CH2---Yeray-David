@@ -1,11 +1,11 @@
 import PropTypes from "prop-types";
 
 const Cell = ({ letter }) => {
-  return <li>{letter}</li>;
-};
+  Cell.propTypes = {
+    letter: PropTypes.string.isRequired,
+  };
 
-Cell.propTypes = {
-  letter: PropTypes.string.isRequired,
+  return <li>{letter}</li>;
 };
 
 export default Cell;
