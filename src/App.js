@@ -51,7 +51,7 @@ function App() {
             <div>
               <Message text={textMessage} />
               <section className="game__hangman">
-                <Hangman />
+                <Hangman staged={8} />
               </section>
             </div>
             <div className="abecedary">
