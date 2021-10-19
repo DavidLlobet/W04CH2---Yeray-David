@@ -2,8 +2,9 @@ import PropTypes from "prop-types";
 import { useState } from "react";
 
 const Letter = ({ text, actionOnClick }) => {
-
   let [disabled, setDisabled] = useState(false);
+
+  const a = 1;
 
   Letter.propTypes = {
     text: PropTypes.string.isRequired,
@@ -14,7 +15,11 @@ const Letter = ({ text, actionOnClick }) => {
     setDisabled(true);
   };
 
-  return <button {disabled ? 'disabled' : ''} nClick={(actionOnClick, disableButton)}>{text}</button>;
+  return (
+    <button disabled={disabled} onClick={(() => actionOnClick, disableButton)}>
+      {text}
+    </button>
+  );
 };
 
 export default Letter;
