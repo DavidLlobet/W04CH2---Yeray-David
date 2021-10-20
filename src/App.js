@@ -35,14 +35,11 @@ function App() {
     "z",
   ];
 
-  let [word, setWord] = useState('pocahontas');
-  word = word.split("");
+  let wordSplitted = "pocahontas".split("");
 
   let x = "a";
 
-  let wordSplitted = words.split("");
-
-  wordSplitted.map((letter) => (letter === x ? (letter = x) : letter));
+  let newArray = wordSplitted.map((letter) => (letter === x ? x : ""));
 
   const textMessage = "Push a letter!";
 
@@ -71,8 +68,8 @@ function App() {
             </div>
           </div>
           <ul className="game__word">
-            {wordSplitted.map((char, i) => (
-              <Box key={i} letter={} />
+            {newArray.map((char, i) => (
+              <Box key={i} letter={char.toUpperCase()} />
             ))}
           </ul>
         </main>
