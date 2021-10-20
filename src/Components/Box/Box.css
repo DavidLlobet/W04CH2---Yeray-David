@@ -1,0 +1,12 @@
+.game__letter {
+  width: 50px;
+  height: 80px;
+  background: lightgrey;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid black;
+  margin: 0 5px;
+  font-size: 25px;
+}
